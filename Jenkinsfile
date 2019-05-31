@@ -25,7 +25,7 @@ pipeline {
     
     stage('S3 upload') {
       steps {
-        sh "aws s3 cp Example.zip s3://briantoalbucket1"
+        sh "aws s3 cp example.zip s3://briantoalbucket1"
       }
     }
 
