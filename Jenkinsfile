@@ -28,6 +28,12 @@ pipeline {
         sh "aws s3 cp example.zip s3://briantoalbucket1"
       }
     }
+    
+        stage('run CloudFormation template') {
+      steps {
+        sh "aws cloudformation create-stack --stack-name aws-cloud9-BrianToalCloud9Env-2b3da52fd7be4c80b7812a0aed1414d5 --template-body BTCloudFormation.template"
+      }
+    }
 
 }
 }
