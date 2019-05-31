@@ -31,7 +31,7 @@ pipeline {
     
         stage('run CloudFormation template') {
       steps {
-        sh "aws cloudformation create-stack --stack-name aws-cloud9-BrianToalCloud9Env-2b3da52fd7be4c80b7812a0aed1414d5 --region us-east-1 --template-body BTCloudFormation.template"
+        sh "aws cloudformation create-stack --stack-name aws-cloud9-BrianToalCloud9Env2 --region us-east-1 --template-body BTCloudFormation.template"
       }
     }
 
